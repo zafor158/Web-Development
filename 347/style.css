@@ -1,0 +1,164 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f7f7;
+}
+
+/* Header styles */
+header {
+  background-color: blueviolet;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main content styles */
+.main {
+  padding: 20px;
+}
+
+/* Home section */
+.home-section {
+  background-color: #f1f1f1;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-section h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.home-section p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* About section */
+.about-section,
+.team-section {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  font-size: 16px;
+  color: #666;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  flex-basis: calc(33.33% - 20px); /* Adjust this value for spacing */
+  text-align: center;
+  margin: 20px;
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+.map {
+   height: 400px; /* Set an appropriate height */
+   margin-top: 20px;
+   /* Add any additional styles you want for the map section */
+}
+
+/* Contact Us Section */
+.contact {
+   background-color: #f2f2f2;
+   padding: 40px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.contact-info {
+   flex: 1;
+}
+
+.contact-info h2,
+.social-media h2 {
+   font-size: 24px;
+   margin-bottom: 10px;
+}
+
+.social-media {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.social-media a {
+   text-decoration: none;
+   margin: 10px;
+}
+
+/* Services Section */
+.services {
+   padding: 40px;
+}
+
+.services h2 {
+   font-size: 24px;
+   margin-bottom: 10px;
+}

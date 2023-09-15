@@ -1,0 +1,265 @@
+/* Reset some default styles */
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: blue; /* Set the background color to sky blue */
+            color: #fff;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .service-card {
+    background-color: #f5f5f5; /* Use a lighter background color */
+    border: 2px solid #007bff; /* Add a solid border with a primary color */
+    border-radius: 10px; /* Increase border-radius for rounded corners */
+    padding: 30px; /* Add more padding for spacing */
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Enhance the box shadow */
+    transition: transform 0.2s, box-shadow 0.2s; /* Add smooth hover effect */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Add a slight lift on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Improve box shadow on hover */
+}
+
+.service-card h3 {
+    font-size: 1.5rem; /* Increase font size for the heading */
+    color: #007bff; /* Use the primary color for headings */
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1.2rem; /* Slightly increase font size for the content */
+    color: #333; /* Use a darker text color */
+}
+
+.service-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: 1.2rem;
+    margin-top: 15px; /* Add spacing between content and button */
+}
+
+.service-card a:hover {
+    background-color: #0056b3; /* Darken button color on hover */
+}
+
+
+        .service-icon img {
+            max-width: 220px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .service-card p {
+            font-size: 16px;
+        }
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Services section styles */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    flex: 1;
+    max-width: 300px;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-icon img {
+    max-width: 200px;
+    margin-bottom: 50px;
+}
+
+.service-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+}
+
+/* Customer reviews section styles */
+.customer-reviews {
+    text-align: center;
+    padding: 20px;
+}
+
+.customer-review {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.customer-review h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.customer-review p {
+    font-size: 16px;
+}
+
+/* Add review form styles */
+.add-review {
+    text-align: center;
+    padding: 20px;
+}
+
+.add-review h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.add-review-form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.add-review-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.add-review-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.customer-reviews,
+.add-review {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0; /* Use a softer border color */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+/* Review styles */
+.customer-review {
+    margin: 20px 0;
+    padding: 20px; /* Add padding for separation and aesthetics */
+    border: 1px solid #e0e0e0; /* Add a border to each review */
+    border-radius: 10px; /* Round the corners of each review */
+}
+
+.customer-review h3 {
+    font-size: 24px; /* Increase font size for headings */
+    margin: 0;
+    color: #007bff; /* Use a primary color for headings */
+    margin-bottom: 10px;
+}
+
+/* Add review form styles */
+label {
+    font-size: 18px;
+    color: #333; /* Use a darker text color */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    margin-top: 10px; /* Add spacing above the textarea */
+}
+
+button {
+    background-color: #007bff; /* Use the primary color for the button */
+    color: #fff;
+    padding: 12px 24px; /* Increase padding for the button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    margin-top: 15px; /* Add spacing between textarea and button */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darken button color on hover */
+}

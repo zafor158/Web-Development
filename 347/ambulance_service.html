@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Include Font Awesome for icons -->
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration-color: whitesmoke;
+    padding: 10px 0; /* Increased padding for a more prominent header */
+    width: 100%;
+}
+
+h1 {
+    font-size: 42px; /* Larger font size for the title */
+    margin-bottom: 10px; /* Add some spacing between the title and subtitle */
+}
+
+p {
+    font-size: 18px; /* Larger font size for the subtitle */
+    opacity: 0.8; /* Slightly reduce opacity for subtlety */
+    color: white;
+}
+
+
+
+
+.services {
+    display: flex;
+    flex-direction: column; /* Stack services vertically */
+    align-items: center; /* Center services horizontally */
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.service-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%; /* Adjust width as needed */
+    min-width: 300px;
+    transition: transform 0.3s ease; /* Add animation transition */
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Add hover animation */
+}
+
+.service-card:last-child {
+    margin-bottom: 0;
+}
+
+.service-icon img {
+    max-width: 100%;
+
+}
+.service-icon {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Ensure the icon container takes full height */
+}
+
+
+h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+.payment-info {
+    margin-top: 20px;
+}
+
+.payment-info strong {
+    font-weight: bold;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+    .customer-reviews {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 1200px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.customer-reviews h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.customer-review {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.customer-review h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.add-review {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-review h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+    /* Add more styles as needed */
+</style>
+
+
+
+    <title>Services</title>
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+        <p>Your trusted partner in times of need.</p>
+    </header>
+
+    <section class="services">
+        <div class="service-card">
+            <div class="service-icon">
+                <img src="non-emergency-ambulance-1521887142-3744915.jpeg" alt="Non Ac Ambulance">
+            </div>
+            <h2>Non Ac Ambulance</h2>
+            <p>We provide non-ac ambulance service for clients due to cost issues. Many of us are not so rich. For them, this kind of service is comfortable.</p>
+    
+            <div class="payment-info">
+                <strong>Payment Information:</strong>
+                <p><strong>Bkash Payment Method:</strong> Bkash App</p>
+                <p><strong>Bkash Number:</strong> 01234567890</p>
+                <p><strong>Pay Amount:</strong> 2000 BDT</p>
+
+                <ol>
+        <li>Open the Bkash app on your mobile device.</li>
+        <li>Click on the "Send Money" option.</li>
+        <li>Enter the Bkash number: 01234567890 as the recipient.</li>
+        <li>Enter the amount: 5000 BDT as the payment amount.</li>
+        <li>Provide your name and purpose of payment as 'Ambulance Service'.</li>
+        <li>Review the payment details and confirm the transaction.</li>
+    </ol>
+
+            </div>
+            <p><strong>Instructions:</strong> To make the payment using the Bkash app, follow these steps:</p>
+    
+
+            <div class="contact-info">
+                <strong>Contact Information:</strong>
+                <p><strong>Ambulance Contact Number:</strong> 01756473367</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">
+                <img src="ac_am.webp" alt="Dispatch EMS Team">
+            </div>
+            <h2>Ac Ambulance</h2>
+            <p>We highly recommend taking this service through an AC ambulance so that your patient can feel comfortable during bad conditions.</p>
+
+            <div class="payment-info">
+                <strong>Payment Information:</strong>
+                <p><strong>Bkash Payment Method:</strong> Bkash App</p>
+                <p><strong>Bkash Number:</strong> 01234567890</p>
+                <p><strong>Pay Amount:</strong> 5000 BDT</p>
+            </div>
+
+            <div class="contact-info">
+                <strong>Contact Information:</strong>
+                <p><strong>Ambulance Contact Number:</strong> 01990436506</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <img src="emergency_halicapter.webp" alt="Helicapter">
+            </div>
+            <h2>Emergency Helicapter</h2>
+            <p>We also provide helicapter service in case of very emergence.Sometimes patients stay in the very rural area where there is no way to take medical treatment and time consuming matter to provide our other services and also sometimes patients conditions are in danger,for that reason we are highly recommended to take this service. Life is first priority. So protect your patients from the danger.</p>
+        </div>
+
+
+        <!-- Add more service cards as needed -->
+    </section>
+
+    <section class="customer-reviews">
+        <h2>Customer Reviews</h2>
+        <div class="customer-review">
+            <h3>Customer 1</h3>
+            <p>Superfast services, emergency troops have been sent. Overall satisfied.</p>
+        </div>
+        <div class="customer-review">
+            <h3>Customer 2</h3>
+            <p>I will suggest everyone to use their service. Superfast, easy, and reliable. My rating is 10 out of 10.</p>
+        </div>
+    </section>
+
+    <section class="add-review">
+     
+        <form action="review.php" method="post">
+            <div class="email-input">
+            <label for="email"><h2>Your Email</h2></label>
+                <input type="email" id="email" name="email" required>
+                  </div>
+
+                       <h2>Add Your Review</h2>
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+
+    <!-- Include Bootstrap JS and jQuery (if needed) -->
+    <!-- Remove this section if not used -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Location and Save</title>
+</head>
+<style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #getLocation {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #getLocation:hover {
+            background-color: #0056b3;
+        }
+
+        #location {
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        /* Style the map container */
+        #map {
+            height: 300px;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</style>
+<body>
+    <h2>Get Location and Save</h2>
+    <button id="getLocation">Share My Location</button>
+    <p id="location"></p>
+
+    <script>
+        document.getElementById("getLocation").addEventListener("click", function() {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
+
+                    var apiKey = "pk.bf7a89e841ef56632e3676ac4f553a3e";//main jinis
+                    fetch("https://us1.locationiq.com/v1/reverse.php?key=" + apiKey + "&lat=" + latitude + "&lon=" + longitude + "&format=json")
+                        .then(response => response.json())
+                        .then(data => {
+                            var city = data.address.city || data.address.town || "";
+                            var country = data.address.country || "";
+                            var sector = data.address.sector || "";
+                            var road = data.address.road || "";
+                            var block = data.address.block || "";
+
+                            var locationText = "City: " + city + ", Country: " + country +
+                                               ", Sector: " + sector + ", Road: " + road + ", Block: " + block;
+
+                            document.getElementById("location").textContent = locationText;
+
+                            // Save the location to your database using an AJAX request
+                            var xhr = new XMLHttpRequest();
+                            xhr.open("POST", "save_location.php", true);
+                            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                            xhr.send("latitude=" + latitude + "&longitude=" + longitude +
+                                     "&city=" + city + "&country=" + country +
+                                     "&sector=" + sector + "&road=" + road + "&block=" + block);
+                        })
+                        .catch(error => {
+                            console.error("Error fetching location data:", error);
+                        });
+                });
+            } else {
+                document.getElementById("location").textContent = "Geolocation is not supported by this browser.";
+            }
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <style>
+        /* Add some styling for the map container */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+
+     <!--Add a div to contain the Google Map--> 
+    <div id="map"></div>
+
+    <script>
+        document.getElementById("getLocation").addEventListener("click", function () {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
+
+                    var apiKey = "AIzaSyDR-lzVDIwvxB704_fGt1zZ27UJAzcd0q0"; // Replace with my API key
+
+                    // Fetch location data using LocationIQ (as in your existing code)
+
+                    // Create a new Google Map centered at the user's location
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: { lat: latitude, lng: longitude },
+                        zoom: 15 // Adjust the zoom level as needed
+                    });
+
+                    // Create a marker for the user's location
+                    var marker = new google.maps.Marker({
+                        position: { lat: latitude, lng: longitude },
+                        map: map,
+                        title: 'My Location'
+                    });
+
+                    // Display the map and location information
+                    map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+
+                    
+
+                });
+            } else {
+                document.getElementById("location").textContent = "Geolocation is not supported by this browser.";
+            }
+        });
+    </script>
+
+    <!--Include the Google Maps JavaScript API script--> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR-lzVDIwvxB704_fGt1zZ27UJAzcd0q0&libraries=places&callback=initMap" async defer></script>
+</body>
+</html>

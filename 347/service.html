@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="service.css">
+    <title>Services</title>
+    
+</head>
+<body>
+    <style>
+        .email-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input[type="email"]:focus {
+  border-color: #007bff; /* Change to your desired focus color */
+  outline: none;
+}
+
+    </style>
+    <header>
+        <h1>About Our Services 1</h1>
+        <p>Your trusted partner in times of need.</p>
+    </header>
+
+    <section class="services">
+        <div class="service-card">
+            <div class="service-icon">
+                <img src="ecalls.png" alt="Emergency Calls">
+            </div>
+            <h2>Emergency Calls</h2>
+            <p>We provide quick and superfast calls on our provided number to know more details about your accident conditions.</p>
+            <p><h3>Emergency Contact: 01756473367</h3></p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">
+                <img src="ambulance.jpg" alt="Dispatch EMS Team">
+            </div>
+            <h2>Dispatch EMS Team</h2>
+            <p>We have highly qualified and expert emergency teams who can handle your post and pre-accidental situations and can reach your location as fast as possible.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">
+                <img src="customer support.png" alt="Customer Support">
+            </div>
+            <h2>Customer Support</h2>
+            <p>Our expert customer support can suggest you the nearest hospital and also suggest doctors by hearing your needs. You can take our service 24 hours.</p>
+        </div>
+    </section>
+
+    <section class="customer-reviews">
+        <h2>Customer Reviews</h2>
+        <div class="customer-review">
+            <h3>Customer 1</h3>
+            <p>Superfast services, emergency troops have been sent. Overall satisfied.</p>
+        </div>
+        <div class="customer-review">
+            <h3>Customer 2</h3>
+            <p>I will suggest everyone to use their service. Superfast, easy, and reliable. My rating is 10 out of 10.</p>
+        </div>
+    </section>
+
+    <section class="add-review">
+     
+        <form action="review.php" method="post">
+            <div class="email-input">
+            <label for="email"><h2>Your Email</h2></label>
+                <input type="email" id="email" name="email" required>
+                  </div>
+
+                       <h2>Add Your Review</h2>
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+</body>
+</html>
